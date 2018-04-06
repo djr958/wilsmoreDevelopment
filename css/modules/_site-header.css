@@ -1,0 +1,135 @@
+.site-header {
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    transition: background-color .3s ease-out;
+    color: var(--mainOrange);
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+.site-header__text {
+    opacity: 0;
+}
+
+.site-header__text-line1 { 
+    font-weight: 200;    
+    margin-top: 0;
+    position: fixed;
+}
+
+.site-header__text-line2 {
+    font-weight: 200; 
+    font-size: .9rem;
+    margin-top: 20px;
+    position: fixed;
+}
+
+.site-header--is-expanded {
+    background-color: rgba(47, 85, 114, .55); /* This is the mainBlue color, but using isn't valid css. Need a plugin.*/
+}
+
+/*
+    The hamburger displayed on small screens.
+*/
+.site-header__menu-icon {
+    width: 20px;
+    height: 19px;
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    right: 16px;        /* Moved it to the left a bit more because of scroll bar. */
+}
+
+/* The top bar. */
+.site-header__menu-icon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 3px;
+    background-color: var(--darkBlue);
+    transform-origin: 0 0;
+    transition: transform .3s ease-out;
+}
+
+/* The middle bar. */
+.site-header__menu-icon__middle {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 20px;
+    height: 3px;
+    background-color: var(--darkBlue);  
+    transition: all .3s ease-out;  
+    transform-origin: 0 50%;
+}
+
+/* The bottom bar. */
+.site-header__menu-icon::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    height: 3px;  
+    background-color: var(--darkBlue);
+    transform-origin: 0 100%;
+    transition: transform .3s ease-out;    
+}
+
+.site-header__menu-content {
+    opacity: 0;
+    transform: scale(1.2);
+    transition: all .3s ease-out;
+    position: relative;
+    padding-top: 25px;
+    z-index: -10;                       /* Ensures invisible buttons can't be clicked on. */
+    text-align: center;
+}
+
+.site-header__menu-content--is-visible {
+    opacity: 1;
+    z-index: 1;                         /* Button should be clickable now. */
+    transform: scale(1);
+}
+
+.site-header__menu-icon--close-x::before {
+    transform: rotate(45deg) scaleX(1.25);
+}
+
+.site-header__menu-icon--close-x > .site-header__menu-icon__middle {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.site-header__menu-icon--close-x::after {
+    transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+}
+
+/*
+    atMedium.
+*/
+@media (min-width: 800px) {
+    .site-header {
+        position: fixed;
+        background-color: rgba(47, 85, 114, .9); 
+    }
+    .site-header__text {
+        opacity: 1;
+    }
+    .site-header__menu-content {
+        opacity: 1;
+        z-index: 1;
+        padding-top: 0;
+        transform: scale(1);
+    }
+    .site-header__logo {
+        left: auto;
+        transform: translateX(0);        
+    }
+    .site-header__menu-icon {
+        display: none;
+    }
+}
