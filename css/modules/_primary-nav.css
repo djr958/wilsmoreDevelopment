@@ -36,6 +36,13 @@
 }
 
 /*
+    Don't display the home link on smaller screens.
+*/
+.primary-nav .primary-nav__home {
+    display: none;
+}
+
+/*
     atMedium.
 */
 @media (min-width: 800px) {
@@ -56,5 +63,8 @@
         font-size: 1rem;
         padding: 12px 0;
         background-color: transparent;
+    }
+    .primary-nav .primary-nav__home {
+        display: block;
     }
 }
