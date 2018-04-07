@@ -16,6 +16,9 @@ $(document).ready(function() {
                 // Add hash (#) to the URL when finished scrolling (default click behaviour).
                 window.location.hash = hash;
             });
+        } else {
+            // The home link is '#' only so this.hash == "" and hence needs special treatment.
+            $('html, body').animate({scrollTop : 0}, 800);
         }
     });
 
