@@ -27,7 +27,7 @@
 }
 
 .site-header--is-expanded {
-    background-color: rgba(47, 85, 114, .55); /* This is the mainBlue color, but using isn't valid css. Need a plugin.*/
+    background-color: rgba(47, 85, 114, .55); /* This is the blueGrey color, but using isn't valid css. Need a plugin.*/
 }
 
 /*

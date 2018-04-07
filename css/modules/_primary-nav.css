@@ -31,7 +31,7 @@
     display: block;
     padding: 5px 8px;
     font-size: .8rem;
-    background-color: rgba(47, 85, 114, .8); /* This is the mainBlue color, but using isn't valid css. Need a plugin.*/
+    background-color: rgba(47, 85, 114, .8); /* This is the blueGrey color, but using isn't valid css. Need a plugin.*/
     border-radius: 2px;
 }
 
