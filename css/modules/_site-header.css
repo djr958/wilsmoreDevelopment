@@ -10,6 +10,7 @@
 
 .site-header__text {
     opacity: 0;
+    padding-left: 15px;
 }
 
 .site-header__text-line1 { 

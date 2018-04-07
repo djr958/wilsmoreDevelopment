@@ -8,9 +8,12 @@
 @import "./modules/_unitC.css";
 @import "./modules/_contact-us.css";
 @import "./modules/_scroll-up-button.css";
+@import "./modules/_site-footer.css";
 
-body {
-    margin: 0 0 0 0;
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 .unitA, .unitB, .unitC, .contact-us {

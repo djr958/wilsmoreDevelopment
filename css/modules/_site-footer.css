@@ -1,0 +1,32 @@
+.site-footer {
+    display: none;
+}
+
+.site-footer-text {
+    color: var(--mainOrange);
+    padding-left: 15px;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: .7rem;
+}
+
+.site-footer__text-line1 { 
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.site-footer__text-line2 {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+@media (min-width: 800px) {
+    .site-footer {
+        display: block;
+        height: 47px;
+        width: 100vw;
+        background-color: rgba(47, 85, 114, .9); 
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+    }
+}
