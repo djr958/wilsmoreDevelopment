@@ -11,10 +11,8 @@
 @import "./modules/_site-footer.css";
 @import "./modules/_text.css";
 
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+body {
+    margin: 0px;
 }
 
 .unitA, .unitB, .unitC, .contact-us {
