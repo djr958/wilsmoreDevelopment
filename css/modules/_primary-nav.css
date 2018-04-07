@@ -55,9 +55,10 @@
     .primary-nav li {
         float: left;
         display: block;
+        padding-right: 20px;
     }
     .primary-nav li:last-child {
-        padding-right: 20px;
+        padding-right: 40px;
     }
     .primary-nav a {
         font-size: 1rem;

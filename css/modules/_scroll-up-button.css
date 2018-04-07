@@ -1,12 +1,25 @@
-.scrollToTop{
+.scrollToTop {
     height:10px;
     padding:30px; 
     position:fixed;
-    bottom: 47px;
+    bottom: 10px;
     right:10px;
     display:none;
     background: url('../../images/icons/arrow-up.png') no-repeat 0px 20px;
 }
-.scrollToTop:hover{
+
+.scrollToTop:hover {
     text-decoration:none;
+}
+
+/*
+    atMedium.
+*/
+@media (min-width: 800px) {
+    .scrollToTop {
+        /*
+            Move the icon above the footer.
+        */
+        bottom: 47px;
+    }
 }
