@@ -9,6 +9,7 @@
 @import "./modules/_contact-us.css";
 @import "./modules/_scroll-up-button.css";
 @import "./modules/_site-footer.css";
+@import "./modules/_text.css";
 
 html, body {
     margin: 0;
