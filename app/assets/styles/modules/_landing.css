@@ -2,7 +2,6 @@
 
     @mixin atSmall {
         border-bottom: 10px solid $mainBlue;
-        position: relative;
     }
 
     &__image {

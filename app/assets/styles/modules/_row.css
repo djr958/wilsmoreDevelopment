@@ -69,7 +69,12 @@
 
         &__medium-8--smaller {
             width: 63%;
-        }        
+        }  
+        
+        &__medium-12 {
+            float: left;
+            width: 100%
+        }
     }
 
     @mixin atLarge {
@@ -99,7 +104,12 @@
 
         &__large-8--smaller {
             width: 63%;
-        }        
+        }  
+        
+        &__large-12 {
+            float: left;
+            width: 100%
+        }
     }
 
     /* Begin Equal Height Rules */

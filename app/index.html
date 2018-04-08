@@ -47,7 +47,7 @@
                         <li><a href="#unitA" id="linkA">Unit A</a></li>
                         <li><a href="#unitB" id="linkB">Unit B</a></li>
                         <li><a href="#unitC" id="linkC">Unit C</a></li>
-                        <li><a href="#contact-us" id="linkcontact-us">Contact Us</a></li>
+                        <li><a href="#message" id="message">Contact Us</a></li>
                     </ul>
                 </nav>         
             </div>
@@ -103,6 +103,132 @@
 
     </div>
 
+    <div id="message" class="page-section message">
+
+        <div class="wrapper wrapper--small wrapper--no-padding-until-medium">   
+               
+            <div class="input">
+        
+                <div class="row">
+                    <div class="row__medium-12">
+                        <h3 class="input__information">Please contact us if you would like to be advised when the units are being offered for sale.</h3>
+                        <h3 class="input__information">Either email david@wilsmoreDevelopment.com [link to automatically create an email in the client’s email program if they click on the link] or complete the form below</h3>
+                        <h3 class="input__information">We will only give your contact details to the one real estate agent chosen to sell the properties and we will delete your contact details once the properties have been sold.</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="row__medium-12">
+                        <h3 class="input__heading">Contact Us Form</h3>
+                    </div>
+                </div>                
+        
+                <form novalidate Submit="saveEmail()">
+            
+                    <div class="row"> 
+                        <div class="row__medium-6">
+                            <div class="input__label">
+                                <label for="name">Name:</label>
+                            </div>
+                        </div>
+                        <div class="row__medium-6">
+                            <input 
+                                name="name"
+                                id="name"
+                                class="input__textbox" 
+                                type="text"
+                                placeholder="(required)" 
+                                required
+                            >
+                            <!--<div *ngIf="messageForm.get('subject').hasError('required') && 
+                                        messageForm.get('subject').touched && 
+                                        messageForm.get('subject').dirty" class="row__error">
+                            The subject is required.
+                            </div>-->
+                        </div>                                 
+                    </div>
+
+                    <div class="row"> 
+                        <div class="row__medium-6">
+                            <div class="input__label">
+                                <label for="email">Your Email Address:</label>
+                            </div>
+                        </div>
+                        <div class="row__medium-6">
+                            <input 
+                                id="email"
+                                class="input__textbox" 
+                                type="email"
+                                placeholder="(required)"
+                                required
+                            >
+                            <!--<div *ngIf="messageForm.get('email').touched && 
+                                        messageForm.get('email').invalid &&
+                                        messageForm.get('email').dirty" class="row__error">
+                                <div *ngIf="messageForm.get('email').hasError('required')">
+                                    The email address is required!
+                                </div>
+                                <div *ngIf="messageForm.get('email').hasError('email') && !messageForm.get('email').hasError('required')">
+                                    Invalid email!
+                                </div>                            
+                            </div>-->
+
+                        </div>          
+                    </div>
+
+                    <div class="row"> 
+                        <div class="row__medium-6">
+                            <div class="input__label">
+                                <label for="email">Your Phone Number:</label>
+                            </div>
+                        </div>
+                        <div class="row__medium-6">
+                            <input 
+                                id="phone"
+                                name="phone"
+                                class="input__textbox" 
+                                type="text"
+                            >
+                        </div>          
+                    </div>
+
+                    <div class="row"> 
+                        <div class="row__medium-6">
+                            <div class="input__label">
+                                <label for="message">Your Message:</label>
+                            </div>
+                        </div>
+                        <div class="row__medium-6">
+                            <textarea
+                                id="message"
+                                class="input__textarea" 
+                                placeholder="Message (required)..">
+                            </textarea>
+                            <!--<div *ngIf="messageForm.get('message').hasError('required') &&
+                                        messageForm.get('message').touched &&
+                                        messageForm.get('message').dirty" class="row__error row__error-last">
+                                The message is required.
+                            </div>-->               
+                        </div>        
+                    </div>        
+            
+                    <!-- 
+                    Need own row here so the 'Send' button and 'Letter Remaining' label and counter 
+                    stay on the same line. 
+                    -->
+                    <div class="row">
+                        <div class="row__medium-12">
+                            <button type="submit" class="btn">Send</button>
+                        </div>                 
+                    </div>
+            
+                </form>
+        
+            </div>
+        
+        </div>
+          
+    </div>    
 
     <footer class="site-footer">
 
