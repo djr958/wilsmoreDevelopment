@@ -1,13 +1,28 @@
 .list {
     text-align: left;
     color: $darkBlue;
-    padding-bottom: 4px;
+    padding-bottom: .25rem;
+    padding-left: 1.75rem;
+
+    @mixin atMedium {
+        padding-left: 3rem;
+    }
+
 }
 
 .list > li {
     margin: 10px 0;
+    font-size: .6rem;
+
+    @mixin atMedium {
+        font-size: .9rem
+    }
 }
 
+/*
+    When the two lists, side by side on laptops, come together one on top of the other on a mobile
+    there's a gap between the last item in the first list and the top item of the second.
+*/
 .list > li:last-child {
-    margin: 0;
+    margin-bottom: -11px;
 }
