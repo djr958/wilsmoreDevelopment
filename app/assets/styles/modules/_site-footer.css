@@ -1,0 +1,22 @@
+.site-footer {
+
+    display: none;
+
+    &__text {
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+
+    @mixin atMedium {
+        display: block;
+        color: #FFF;
+        padding-left: 32px;
+        line-height: .2rem;
+        height: 57px;
+        width: 100vw;
+        background-color: rgba($mainBlue, .9); 
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+    }    
+}

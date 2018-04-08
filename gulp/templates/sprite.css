@@ -1,0 +1,26 @@
+/* Do not edit modules/_sprite.css (this file!) directly as it is generated automatically by Gulp.
+Instead edit gulp/templates/sprite. */
+
+{{#shapes}}
+    {{#first}}
+        .icon {
+            background-image: url('/assets/images/sprites/{{{sprite}}}');
+        }
+
+        /* 
+            Modernizr determines, by parsing through all the files,  that we have an 
+            svg file but the browser being used doesn't support svg files. It adds a 
+            class to the HTML tag thus "<HTML class="no-svg">". We can check for this 
+            and put a reference to a png file instead of an svg file in the /modules/_sprite.css 
+            file.
+        */
+        .no-svg .icon {
+            background-image: url('/assets/images/sprites/{{#replaceSvgWithPng}}{{{sprite}}}{{/replaceSvgWithPng}}');
+        }        
+    {{/first}}
+    .icon--{{base}} {
+        width: {{width.outer}}px;
+        height: {{height.outer}}px;
+        background-position: {{position.relative.xy}};
+    }
+{{/shapes}}

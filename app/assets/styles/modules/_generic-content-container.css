@@ -1,0 +1,24 @@
+.generic-content-container {
+
+    /*
+        A paragraph that is nested withing a 'generic-content-container' element.
+    */
+    p {
+        font-weight: 300;
+        line-height: 1.65;       
+        margin: 0 0 1.8rem 0;
+
+        @mixin atSmall {
+            font-size: 1.125rem;
+        }
+    }
+
+    /*
+        Any link within a paragraph within a 'generic-content-container' element.
+        The link ('a') could have been nested within the 'p' element above but the
+        course guy doesn't like nesting more than twice.
+    */
+    p a {
+        font-weight: 700;
+    }
+}

@@ -1,0 +1,163 @@
+.site-header {
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    transition: background-color .3s ease-out;
+    color: #FFF;
+
+    &--is-expanded {
+        background-color: rgba($mainBlue, .55);
+    }
+
+    @mixin atMedium {
+        position: fixed;
+        background-color: rgba($mainBlue, .9);
+
+        &--dark {
+            background-color: rgba(23, 51, 72, .85);
+        }
+    }
+
+    &__btn-container {
+        @mixin atMedium {
+            float: right;
+        }
+        
+    }
+
+    &__text {
+
+        display: none;
+
+        @mixin atMedium {
+            display: block;
+            &-line1 {
+                font-weight: 400;    
+                margin-top: 0;
+                font-size: 1.3rem;
+                position: fixed;
+            }
+    
+            &-line2 {
+                font-weight: 300; 
+                font-size: .9rem;
+                margin-top: 23px;
+                position: fixed;
+            }
+        }
+
+    }
+
+    &__logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) scale(.8);
+        transition: transform .3s ease-out;
+        transform-origin: 50% 0;                /* Scale works around the centre of the image, leaving a margin around it. The transform-origin allows us to say where the axis should be that we scale around. 0 would be the top of the image so it moves up. Try 50% and see what happens!*/
+        background-color: $mainBlue;
+        padding: 25px 36px;
+
+        @mixin atMedium {
+            left: auto;
+            transform: translateX(0);
+        
+            .site-header--dark & {              /* Targets the logo ONLY when the dark header is being used. */
+                transform: scale(.56);
+            }
+        }
+    }
+
+    &__logo__graphic {
+        text-indent: -9999px;       /* Hides the text but still allows for accessibility. */
+    }
+
+    &__menu-icon {                  /* The menu icon to click to show links on small screens. */
+        width: 20px;
+        height: 19px;
+        position: absolute;
+        z-index: 10;
+        top: 10px;
+        right: 20px;                /* I have a scroll bar there. Increasing it from 10px to 20px to account for it. */
+
+        &::before {                 /* The top line in the hamburger on small screens. */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: $darkBlue;
+            transform-origin: 0 0;
+            transition: transform .3s ease-out;
+        }
+
+        &__middle {                 /* The middle line in the hamburger on small screens. */
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: $darkBlue;
+            transition: all .3s ease-out;
+            transform-origin: 0 50%;
+        }
+
+        &::after {                  /* The bottom line in the hamburger on small screens. */
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: $darkBlue;
+            transform-origin: 0 100%;
+            transition: transform .3s ease-out;
+        }
+
+        @mixin atMedium {
+            display: none;
+        }
+    }
+
+    &__menu-icon--close-x {
+
+        &::before {
+            transform: rotate(45deg) scaleX(1.25);
+        }
+
+        .site-header__menu-icon__middle {
+            opacity: 0;
+            transform: scaleX(0)
+        }
+
+        &::after {
+            transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+        }
+    }
+
+    &__menu-content {
+        opacity: 0;
+        transform: scale(1.2);
+        transition: all .3s ease-out;
+        position: relative;
+        z-index: -10;
+        padding-top: 0;
+        text-align: center;
+
+        @mixin atMedium {
+            opacity: 1;
+            z-index: 1;
+            padding-top: 0;
+            transform: scale(1);
+        }
+
+        &--is-visible {
+            opacity: 1;
+            z-index: 1;
+            transform: scale(1);
+        }
+    }
+
+}

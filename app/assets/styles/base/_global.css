@@ -1,0 +1,23 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    max-width: auto;
+}
+
+/*
+    * = Every element on the page.
+*/
+* {
+    box-sizing: border-box;
+}
+
+/*
+    All links on the page.
+*/
+a {
+    color: $mainOrange;
+}
